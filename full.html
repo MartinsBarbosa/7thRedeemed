@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Full Catalog - 7th Redeemed</title>
+    <link rel="stylesheet" href="full.css">
+    <style>
+        /* Add styles directly for layout adjustments */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            max-width: 800px;
+            margin: auto;
+            padding: 20px;
+        }
+        .top-bar {
+            display: flex;
+            justify-content: space-between;
+            padding: 10px 0;
+            font-size: 0.9em;
+        }
+        .title-section h1 {
+            font-size: 2em;
+            margin: 0;
+        }
+        .subtitle {
+            font-size: 1em;
+            color: #666;
+        }
+        .content {
+            margin-top: 20px;
+        }
+        .movie-detail {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 20px; /* Spacing between items */
+        }
+        .left-column {
+            width: 25%;
+            padding-right: 20px;
+        }
+        .movie-poster {
+            width: 100%;
+            height: auto;
+            object-fit: cover;
+        }
+        .right-column {
+            width: 75%;
+        }
+        .movie-title {
+            font-size: 1.8em;
+            margin-top: 0;
+        }
+        .movie-report {
+            font-size: 1em;
+            line-height: 1.6;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="top-bar">
+                <a href="index.html">Home</a>
+                <a href="about.html">About 7th</a>
+                <a href="sign-in.html">Sign In</a>
+            </div>
+            
+            <div class="title-section">
+                <h1>Full Catalog</h1>
+                <p class="subtitle">Explore our collection of movies reviewed based on Reformed Christian standards.</p>
+            </div>
+        </header>
+        <div class="content">
+            <!-- Movie Item 1 -->
+            <div class="movie-detail">
+                <div class="left-column">
+                    <a href="new.html">
+                        <img src="poster1.jpg" alt="Movie Poster" class="movie-poster">
+                    </a>
+                </div>
+                <div class="right-column">
+                    <h2 class="movie-title">Ferrari</h2>
+                    <div class="movie-report">
+                        <p>The movie “Ferrari” centers on Enzo Ferrari’s life, his relationships, and his career challenges in the competitive world of car racing. The film portrays Ferrari’s personal and professional life, marked by complex relationships, ambition, and losses. While certain aspects align with themes of human fallibility and personal redemption, other areas do not fully align with Reformed Christian values.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Movie Item 2 -->
+            <div class="movie-detail">
+                <div class="left-column">
+                    <a href="approved.html">
+                        <img src="poster2.jpg" alt="Movie Poster" class="movie-poster">
+                    </a>
+                </div>
+                <div class="right-column">
+                    <h2 class="movie-title">Love Comes Softly</h2>
+                    <div class="movie-report">
+                        <p>The movie “Love Comes Softly” largely aligns with Reformed Christian values, presenting themes of providence, covenant marriage, and redemptive suffering while avoiding gratuitous content. It demonstrates God's sovereignty in bringing good from tragedy and shows characters growing through adversity.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

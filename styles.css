@@ -1,0 +1,136 @@
+/* styles.css */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #001f3f; /* Navy blue background */
+    color: #fff; /* White text */
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    text-align: center;
+}
+
+header {
+    margin-bottom: 20px;
+}
+
+.top-bar {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+    gap: 50px;
+    font-size: 18px;
+}
+
+.top-bar a {
+    text-decoration: none; /* Remove underline from links */
+    color: white; /* Set the text color */
+    margin: 0 15px; /* Space between options */
+}
+
+.top-bar a:visited {
+    color: white; /* Keep the same color as unvisited links */
+}
+
+.top-bar a:hover {
+    color: blue; /* Change color on hover for better UX */
+}
+
+.title-section h1 {
+    font-size: 36px;
+    margin-bottom: 10px;
+}
+
+.subtitle {
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+.search-box {
+    width: 60%;
+    padding: 10px;
+    border: 1px solid #0073e6;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    font-size: 16px;
+}
+
+.button-bar {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 30px;
+}
+
+button {
+    padding: 10px 20px;
+    background-color: #0073e6; /* Blue button */
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #005bb5; /* Darker blue on hover */
+}
+
+.content {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.latest-reviews, .approved-movies {
+    width: 25%;
+}
+
+h2 {
+    background-color: #004080;
+    color: #fff;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.movie-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.movie {
+    background-color: #fff;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    width: 100%;
+    max-width: 250px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    text-align: center;
+    color: #000; /* Black text inside movie items */
+}
+
+.movie img {
+    width: 100%;
+    height: auto;
+}
+
+.trailer-button {
+    display: inline-block;
+    padding: 10px 20px;
+    margin-top: 10px;
+    background-color: #555;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+h3 {
+    margin-top: 10px;
+    color: #000;
+}
