@@ -39,7 +39,7 @@ body {
 }
 
 .top-bar a:hover {
-    color: blue; /* Change color on hover for better UX */
+    color: white; /* Change color on hover for better UX */
 }
 
 /* Keep the "Home" link white even after being clicked */
