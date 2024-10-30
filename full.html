@@ -107,5 +107,47 @@
             </div>
         </div>
     </div>
+
+    <div class="container">
+        <h1>Want updates from 7th Redeemed?</h1>
+            
+        <form id="email-form" class="sign-in-form">
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" placeholder="Enter your email" required>
+            <button type="submit">Sign Up for Updates</button>
+        </form>
+    </div>
+
+    <script>
+        document.getElementById('email-form').addEventListener('submit', function(event) {
+            event.preventDefault();
+
+            // Get the email value from the form input
+            const email = document.getElementById('email').value;
+
+            // Construct the data to be sent in JSON format
+            const data = { email: email };
+
+            // Replace 'YOUR_WEB_APP_URL' with your actual Google Apps Script Web App URL
+            const googleScriptURL = 'https://script.google.com/macros/s/AKfycbwY0OSjAUHUYhkkWBDUsjOOA2K52cwGYGEYkS8Q78pIkDk4Fsa9HMjR1zopejZOosMwPA/exec';
+
+            // Send a POST request to the Google Apps Script URL
+            fetch(googleScriptURL, {
+                method: 'POST',
+                mode: 'no-cors', // "no-cors" is necessary for Google Apps Script web app
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify(data)
+            })
+            .then(response => {
+                // Redirect to thank you page on successful submission
+                window.location.href = 'thank-you.html';
+            })
+            .catch(error => {
+                console.error('Error:', error);
+            });
+        });
+    </script>
 </body>
 </html>
