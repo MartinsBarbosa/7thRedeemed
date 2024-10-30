@@ -20,6 +20,28 @@ body {
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
 }
 
+.top-bar {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+    gap: 50px;
+    font-size: 18px;
+}
+
+.top-bar a {
+    text-decoration: none; /* Remove underline from links */
+    color: white; /* Set the text color */
+    margin: 0 15px; /* Space between options */
+}
+
+.top-bar a:visited {
+    color: white; /* Keep the same color as unvisited links */
+}
+
+.top-bar a:hover {
+    color: blue; /* Change color on hover for better UX */
+}
+
 h1 {
     font-size: 2em;
     margin-bottom: 15px;
