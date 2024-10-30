@@ -16,7 +16,8 @@
             <div class="title-section">
                 <h1>7th Redeemed</h1>
                 <p class="subtitle">Classifying movies for Reformed Christian values and standards.</p>
-                <input type="text" class="search-box" placeholder="Search for movies...">
+                <input type="text" id="search-box" class="search-box" placeholder="Search for movies...">
+                
                 <div class="button-bar">
                     <a href="approved.html"><button>Christian Approved</button></a>
                     <a href="new.html"><button>New</button></a>
@@ -52,5 +53,45 @@
             </section>
         </div>
     </div>
+    
+    <script>
+    const movies = [
+        { title: "Ferrari", link: "new.html" },
+        { title: "Love Comes Softly", link: "approved.html" },
+        { title: "Jurassic Park III", link: "jurassica.html" },
+        // Add more movie objects as needed
+    ];
+
+    const searchBox = document.getElementById('search-box');
+
+    searchBox.addEventListener('input', function() {
+        const query = searchBox.value.toLowerCase();
+        const results = movies.filter(movie => movie.title.toLowerCase().includes(query));
+
+        // Clear previous results
+        const contentSection = document.querySelector('.content');
+        contentSection.innerHTML = '';
+
+        if (results.length > 0) {
+            // Display matching results
+            results.forEach(movie => {
+                const movieDiv = document.createElement('div');
+                movieDiv.classList.add('movie');
+                movieDiv.innerHTML = `
+                    <a href="${movie.link}"><h3>${movie.title}</h3></a>
+                `;
+                contentSection.appendChild(movieDiv);
+            });
+        } else {
+            // Display "not found" message
+            const messageDiv = document.createElement('div');
+            messageDiv.classList.add('no-results');
+            messageDiv.textContent = "We don't have this movie, yet. We'll be adding soon!";
+            contentSection.appendChild(messageDiv);
+        }
+    });
+</script>
+
+    
 </body>
 </html>
